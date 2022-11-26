@@ -15,24 +15,24 @@ const Nav = () => {
         <div className="dash_nav">
             <Navbar light>
                 <div className="d-flex align-items-center" style={{marginLeft: "30px"}}>
-                    <NavbarBrand href="/" className="brandName">Dashboard </NavbarBrand><h5 style={{color: "#C1C5C8", marginTop: "15px", marginLeft: "-6px"}}>{month[monthString]} {day}, {year}</h5>
+                    <NavbarBrand href="/" className="brandName">Dashboard </NavbarBrand><h5 style={{color: "#C1C5C8", marginTop: "15px", marginLeft: "-6px"}} className="d-none d-md-none d-lg-none d-xl-block">{month[monthString]} {day}, {year}</h5>
                 </div>
                 <Form className="navForm">
                     <FormGroup>
                         <InputGroup className="search_bar">
                             <BiSearch />
-                            <Input type="text" placeholder="Search..."></Input>
+                            <Input type="text" placeholder="Search..." className="input-input"></Input>
                         </InputGroup>
                     </FormGroup>
                 </Form>
-                <div className="alerm">
-                    <IoMdNotifications style={{width: "40px", height: "40px"}}/>
+                <div className="alerm d-none d-md-none d-lg-block ">
+                    <IoMdNotifications  style={{width: "40px", height: "40px"}}/>
                 </div>
                 <Media className="dash_media">
                     <Media left middle className="img_media">
-                        <Media src="./assets/pics.jpg" className="passport" alt="User image"></Media>
+                        <Media object src="images.jpeg" className="passport" alt="User image"></Media>
                     </Media>
-                    <Media body>
+                    <Media body className="d-none d-md-none d-lg-none ">
                         <h4>User name</h4>
                     </Media>
                 </Media>
