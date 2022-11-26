@@ -14,7 +14,7 @@ const Nav = () => {
     return(
         <div className="dash_nav">
             <Navbar light>
-                <div className="d-flex align-items-center" style={{marginLeft: "30px"}}>
+                <div className="d-flex align-items-center">
                     <NavbarBrand href="/" className="brandName">Dashboard </NavbarBrand><h5 style={{color: "#C1C5C8", marginTop: "15px", marginLeft: "-6px"}} className="d-none d-md-none d-lg-none d-xl-block">{month[monthString]} {day}, {year}</h5>
                 </div>
                 <Form className="navForm">

@@ -1,5 +1,6 @@
 .Dashboard {
     display: flex;
+    font-size: 20px;
 
     .sideBar {
         position: fixed;
@@ -7,9 +8,44 @@
     .bd {
         flex: 7;
         margin-left: 300px;
-        
-        .Dashboard_body {
-            background-color: #F1F8FF;
+        background-color: #F1F8FF;
+
+        .col1 {
+
+            .user_numbers {
+
+                .body_B {
+
+                    .head {
+                        display: flex;
+                        align-items: center;
+
+                        .head_text {
+                            margin-left: auto;
+                        }
+                    }
+                    .stat {
+                        font-size: 2em;
+                        font-weight: 800;
+                    }
+                    .graph {
+                        color: #567EF7;
+                        font-weight: 700;
+
+                        .icon_bg {
+                            background-color: #E4EAFE;
+                        }
+                    }
+                    .graph1 {
+                        color: #ED6A6A;
+                        
+                        .icon_bg1 {
+                            background-color: #FCE4E4;
+                        }
+
+                    }
+                }
+            }
         }
     }
 }
