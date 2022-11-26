@@ -32,7 +32,7 @@ const SignUp = () => {
                     <Card className="sign_form">
                         <CardBody className="sign_card_body">
                             <h2>Sign Up</h2>
-                            <p>Have an account ? <a href="/signIn" className="signup_link"> sign in</a></p>
+                            <p>Have an account ? <a href="./signIn" className="signup_link"> sign in</a></p>
                             <Form onSubmit={() => handleSubmit}>
                                 <FormGroup className="card_form_group">
                                     <Input type="text" placeholder="Username" name="username" required />

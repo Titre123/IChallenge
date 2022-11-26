@@ -11,6 +11,12 @@ const SignIn = () => {
         event.preventDefault()
     }
 
+    const style = {'border': '1px solid #727070'}
+
+    const changeStyle = () =>{
+        style.border = 'none'
+    }
+
     return(
         <div className="Sign_up">
             <Row className="sign_row">
@@ -35,10 +41,10 @@ const SignIn = () => {
                             <p>Don't have an account? <a href="./signUp" className="signup_link"> sign up</a></p>
                             <Form onSubmit={() => handleSubmit}>
                                 <FormGroup className="card_form_group">
-                                    <Input type="text" placeholder="Username" name="username" required />
+                                    <Input type="email" placeholder="Enter your email" name="email" required />
                                 </FormGroup>
                                 <FormGroup className="card_form_group1">
-                                    <InputGroup className="i_group">
+                                    <InputGroup className="i_group" onClick={changeStyle} style={style}>
                                         <Input type="password" placeholder="password" name="password" required />
                                         <AiFillEye className="eye"/>
                                     </InputGroup>
