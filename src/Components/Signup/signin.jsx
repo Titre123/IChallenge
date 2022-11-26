@@ -21,17 +21,19 @@ const SignIn = () => {
         <div className="Sign_up">
             <Row className="sign_row">
                 <Col md="6" sm="12" className="sign_col1">
-                    <div className="d-flex align-items-center name_heading">
-                        <GiSlumberingSanctuary className="ic_icon"/>
-                        <h2 className="name">IChallenge</h2>
-                    </div>
-                    <div className="welcome_back">
-                        <h2>Welcome back <br /> to IChallenge</h2>
-                    </div>
-                    <div className="text">
-                        <p className="paragraph">
-                            Stop wasting time with frustrating platforms.<br /> Build beautiful courses & contents with ease. Get started<br /> in minutes with our unique & simple authoring tool. 
-                        </p>
+                    <div>
+                        <div className="d-flex align-items-center name_heading">
+                            <GiSlumberingSanctuary className="ic_icon"/>
+                            <h2 className="name">IChallenge</h2>
+                        </div>
+                        <div className="welcome_back">
+                            <h2>Welcome back <br /> to IChallenge</h2>
+                        </div>
+                        <div className="text">
+                            <p className="paragraph">
+                                Stop wasting time with frustrating platforms.<br /> Build beautiful courses & contents with ease. Get started<br /> in minutes with our unique & simple authoring tool. 
+                            </p>
+                        </div>
                     </div>
                 </Col>
                 <Col md="6" sm="12" className="sign_col2">
