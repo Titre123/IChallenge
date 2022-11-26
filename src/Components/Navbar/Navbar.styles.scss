@@ -1,0 +1,54 @@
+.dash_nav {
+    
+    .brandName {
+            font-size: 30px;
+            font-weight: 500;
+            color: #363b64;
+        }
+
+        .navForm {
+            margin-left: auto;
+            margin-top: 10px;
+            .search_bar {
+                display: flex;
+                align-items: center;
+                border: 0px;
+                padding: 5px;
+                border-radius: 9px;
+                width: 400px;
+                background-color: white;
+
+                .form-control {
+                    border: 0px;
+                    background-color: transparent;
+                }
+            }
+        }
+        .alerm {
+            padding: 3px;
+            border: 0px;
+            background-color: white;
+            margin: -3px 10px 0px;
+            border-radius: 10px;
+        }
+
+        .dash_media {
+            background-color: white;
+            border: 0px;
+            display: flex;
+            align-items: center;
+            padding: 4px;
+            border-radius: 10px;
+
+            .img_media {
+                margin-right: 6px;
+            }
+
+            .passport {
+                width: 40px;
+                height: 40px;
+                object-fit: cover;
+                border-radius: 5px;
+            }
+        }
+}

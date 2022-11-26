@@ -1,0 +1,15 @@
+.Dashboard {
+    display: flex;
+
+    .sideBar {
+        position: fixed;
+    }
+    .bd {
+        flex: 7;
+        margin-left: 300px;
+        
+        .Dashboard_body {
+            background-color: #F1F8FF;
+        }
+    }
+}
