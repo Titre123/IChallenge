@@ -32,17 +32,17 @@ const SignUp = () => {
                     <Card className="sign_form">
                         <CardBody className="sign_card_body">
                             <h2>Sign Up</h2>
-                            <p>Have an account ? <a href="./signIn" className="signup_link"> sign in</a></p>
+                            <p>Have an account ? <Link to="/signIn" className="signup_link"> sign in</Link></p>
                             <Form onSubmit={() => handleSubmit}>
                                 <FormGroup className="card_form_group">
-                                    <Input type="text" placeholder="Username" name="username" required />
+                                    <Input type="text" placeholder="Username" name="username" className="input-input" required />
                                 </FormGroup>
                                 <FormGroup className="card_form_group">
-                                    <Input type="email" placeholder="Enter your email" name="email" required />
+                                    <Input type="email" placeholder="Enter your email" className="input-input" name="email" required />
                                 </FormGroup>
                                 <FormGroup className="card_form_group1">
                                     <InputGroup className="i_group">
-                                        <Input type="password" placeholder="password" name="password" required />
+                                        <Input type="password" placeholder="password" name="password" className="input-input" required />
                                         <AiFillEye className="eye"/>
                                     </InputGroup>
                                 </FormGroup>
