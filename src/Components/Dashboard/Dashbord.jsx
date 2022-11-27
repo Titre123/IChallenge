@@ -20,38 +20,38 @@ const DashboardPage = () => {
                     {/* fisrt colume for the number and chart*/}
                     <Col md="8" sm="12" className="col1">
                         <Row>
-                            <Col md="4" sm="12" className="user_numbers">
-                                <Card>
+                            <Col lg="4" md="12" sm="12" className="user_numbers">
+                                <Card className="card-card">
                                     <CardBody className="body_B">
                                         <div className="head">
-                                            <h5>Daily Commit</h5>
-                                            <AiFillQuestionCircle  className="head_text" style={{color: "#CCCCCC", width: "50px", height: "50px"}}/>
+                                            <h5 className="head_text">Daily Commit</h5>
+                                            <AiFillQuestionCircle style={{color: "#CCCCCC", width: "30px", height: "30px"}}/>
                                         </div>
                                         <p className="stat">200k</p>
                                         <p className="graph"><BiTrendingUp  className="icon_bg"/> + 50,3% <span style={{color: "#CCCCCC"}}>vs last week</span></p>
                                     </CardBody>
                                 </Card>
                             </Col>
-                            <Col md="4" sm="12" className="user_numbers">
-                                <Card>
+                            <Col lg="4" md="12" sm="12" className="user_numbers">
+                                <Card className="card-card">
                                     <CardBody className="body_B">
                                         <div className="head">
-                                            <h5>Daily Commit</h5>
-                                            <AiFillQuestionCircle  className="head_text" style={{color: "#CCCCCC", width: "50px", height: "50px"}}/>
+                                            <h5  className="head_text">Followers</h5>
+                                            <AiFillQuestionCircle style={{color: "#CCCCCC", width: "30px", height: "30px"}}/>
                                         </div>
-                                        <p className="stat">200k</p>
+                                        <p className="stat">1.230</p>
                                         <p className="graph"><BiTrendingUp  className="icon_bg"/> + 50,3% <span style={{color: "#CCCCCC"}}>vs last week</span></p>
                                     </CardBody>
                                 </Card>
                             </Col>
-                            <Col md="4" sm="12" className="user_numbers">
-                                <Card>
+                            <Col lg="4" md="12" sm="12" className="user_numbers">
+                                <Card className="card-card">
                                     <CardBody className="body_B">
                                         <div className="head">
-                                            <h5>Daily Commit</h5>
-                                            <AiFillQuestionCircle  className="head_text" style={{color: "#CCCCCC", width: "50px", height: "50px"}}/>
+                                            <h5  className="head_text">Repository</h5>
+                                            <AiFillQuestionCircle style={{color: "#CCCCCC", width: "30px", height: "30px"}}/>
                                         </div>
-                                        <p className="stat">200k</p>
+                                        <p className="stat">12</p>
                                         <p className="graph1"><BiTrendingUp  className="icon_bg1"/> + 50,3% <span style={{color: "#CCCCCC"}}>vs last week</span></p>
                                     </CardBody>
                                 </Card>                             

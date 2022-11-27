@@ -1,13 +1,15 @@
 import React, {useState} from "react";
-import { Navbar, NavbarBrand, Form, FormGroup, InputGroup, Input, Media } from "reactstrap";
+import { Navbar, NavbarBrand, Form, FormGroup, InputGroup, Input, Media, Tooltip } from "reactstrap";
 import { BiSearch } from "react-icons/bi";
 import { IoMdNotifications } from "react-icons/io"
 import "./Navbar.styles.scss";
 
 const Nav = () => {
-        
+    
+    const [ show, setShow ] = useState(false);
+    const toggleShow = () => setShow(!show);
     const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-    const day = new Date().getDay();
+    const day = new Date().getDate();
     const monthString = new Date().getMonth();
     const year = new Date().getFullYear()
     
@@ -28,7 +30,7 @@ const Nav = () => {
                 <div className="alerm d-none d-md-none d-lg-block ">
                     <IoMdNotifications  style={{width: "40px", height: "40px"}}/>
                 </div>
-                <Media className="dash_media">
+                <Media className="dash_media" id="userName">
                     <Media left middle className="img_media">
                         <Media object src="images.jpeg" className="passport" alt="User image"></Media>
                     </Media>
@@ -36,6 +38,9 @@ const Nav = () => {
                         <h4>User name</h4>
                     </Media>
                 </Media>
+                <Tooltip className="media-tip" toggle={toggleShow} target="userName" placement="top" isOpen={show}>
+                    <h6>User name</h6>
+                </Tooltip>
             </Navbar>
         </div>
     )

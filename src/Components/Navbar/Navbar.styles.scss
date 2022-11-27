@@ -95,7 +95,7 @@
                 border: 0px;
                 padding: 3px;
                 border-radius: 9px;
-                width: 300px;
+                width: 250px;
                 background-color: white;
 
                 .form-control {
@@ -165,4 +165,11 @@
             }
         }
     }
+}
+
+.tooltip {
+    --bs-tooltip-bg: white;
+    --bs-tooltip-color: #363b64;
+    border: 0px;
+    border-radius: 20px;
 }

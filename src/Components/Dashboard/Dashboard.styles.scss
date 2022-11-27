@@ -13,39 +13,60 @@
         .col1 {
 
             .user_numbers {
+                .card-card {
+                    border: 0px;
+                    .body_B {
+                    
+                        .head {
+                            display: flex;
+                            align-items: center;
+                            width: 100%;
 
-                .body_B {
-
-                    .head {
-                        display: flex;
-                        align-items: center;
-
-                        .head_text {
-                            margin-left: auto;
+                            .head_text {
+                                margin-right: auto;
+                                font-size: 15px;
+                                font-weight: 500;
+                                color:  #363b64;
+                            }
                         }
-                    }
-                    .stat {
-                        font-size: 2em;
-                        font-weight: 800;
-                    }
-                    .graph {
-                        color: #567EF7;
-                        font-weight: 700;
-
-                        .icon_bg {
-                            background-color: #E4EAFE;
+                        .stat {
+                            font-size: 2em;
+                            font-weight: 800;
+                            color:  #363b64;
                         }
-                    }
-                    .graph1 {
-                        color: #ED6A6A;
-                        
-                        .icon_bg1 {
-                            background-color: #FCE4E4;
-                        }
+                        .graph {
+                            color: #567EF7;
+                            font-weight: 700;
+                            font-size: 15px;
 
+                            .icon_bg {
+                                background-color: #E4EAFE;
+                            }
+                        }
+                        .graph1 {
+                            color: #ED6A6A;
+                            font-weight: 700;
+                            font-size: 15px;
+                            
+                            .icon_bg1 {
+                                background-color: #FCE4E4;
+                            }
+
+                        }
                     }
                 }
+                
             }
+        }
+    }
+    @media (min-width: 768px) and (max-width: 979px) {
+        .user_numbers {
+            width: 100%;
+        }
+    }
+    @media (max-width: 767px) {
+        .user_numbers {
+            margin: 5px;
         }
     }
 }
