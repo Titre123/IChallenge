@@ -1,13 +1,24 @@
 import React, {useState} from "react";
 import Nav from "../Navbar/Navbar";
 import { Row, Col, Card, CardBody, Container } from "reactstrap";
+import { PieData } from "./pie";
 import SideNav from "../Sidebar/SideNav";
 import { AiFillQuestionCircle } from "react-icons/ai";
+import DChart from "./pieChart";
 import { BiTrendingUp, BiTrendingDown } from "react-icons/bi";
 import "./Dashboard.styles.scss";
 
 
 const DashboardPage = () => {
+
+    const [ pieData, setPieData ] = useState({
+        label: PieData.map((data) => data.label),
+        datasets: [{
+            label: "Commit statistics",
+            data: [40, 70],
+            backgroundColor: ["#8BBFFD, #FFC152"]
+        }]
+    })
 
     return(
         <div className="Dashboard">
@@ -59,7 +70,17 @@ const DashboardPage = () => {
                         </Row>
                     </Col>
                     {/* pie chart column */}
-                    <Col md="4" sm="12" className="col2"></Col>
+                    <Col md="4" sm="12" className="col2">
+                        <Row>
+                            <Col sm="12" md="12" lg="12">
+                                <Card>
+                                    <CardBody>
+                                        <DChart data={pieData}/>
+                                    </CardBody>
+                                </Card>
+                            </Col>
+                        </Row>
+                    </Col>
                 </Row>
             </Container>
         </div>
