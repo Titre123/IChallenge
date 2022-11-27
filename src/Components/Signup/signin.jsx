@@ -17,7 +17,7 @@ const SignIn = () => {
     if (statedType == true){
         type = 'text';
     }
-    else{
+    else {
         type = 'password'
     }
     return(

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Button, Col, Row, Card, CardBody, Form, FormGroup, InputGroup, Input, FormText } from "reactstrap";
 import "./sign.styles.scss";
 import { GiSlumberingSanctuary } from "react-icons/gi";
@@ -10,10 +10,19 @@ const SignIn = () => {
     const handleSubmit = (event) => {
         event.preventDefault()
     }
+    const [statedType, setstatedType] = useState(false)
+
+    let type;
+    if (statedType == true){
+        type = 'text';
+    }
+    else {
+        type = 'password'
+    }
 
     const style = {'border': '1px solid #727070'}
 
-    const changeStyle = () =>{
+    const changeStyle = () => {
         style.border = 'none'
     }
 
@@ -42,8 +51,8 @@ const SignIn = () => {
                     <div></div>
                     <Card className="sign_form">
                         <CardBody className="sign_card_body">
-                            <h2>Sign In</h2>
-                            <p>Don't have an account? <Link to="/signUp" className="signup_link"> sign up</Link></p>
+                            <h2>Sign Up</h2>
+                            <p>Don't have an account? <Link to="/signIn" className="signup_link"> sign in</Link></p>
                             <Form onSubmit={() => handleSubmit}>
                                 <FormGroup className="card_form_group">
                                     <Input type="email" placeholder="Username" className="input-input" name="text" required />
@@ -53,8 +62,8 @@ const SignIn = () => {
                                 </FormGroup>
                                 <FormGroup className="card_form_group1">
                                     <InputGroup className="i_group" onClick={changeStyle} >
-                                        <Input type="password" placeholder="password" className="input-input" name="password" required />
-                                        <AiFillEye className="eye"/>
+                                        <Input type={type} placeholder="password" className="input-input" name="password" required />
+                                        <AiFillEye className="eye" onClick={() => setstatedType(!statedType)}/>
                                     </InputGroup>
                                 </FormGroup>
                                 <div><FormText><a href="#" className="f_password">Forgot password?</a></FormText></div>
