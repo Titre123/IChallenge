@@ -35,7 +35,7 @@ const DashboardPage = () => {
                 </div>
                 <Row>
                     {/* fisrt colume for the number and chart*/}
-                    <Col md="8" sm="12" className="col1">
+                    <Col lg="8" md="12" sm="12" className="col1">
                         <Row>
                             <Col lg="4" md="12" sm="12" className="user_numbers">
                                 <Card className="card-card">
@@ -76,7 +76,7 @@ const DashboardPage = () => {
                         </Row>
                     </Col>
                     {/* pie chart column */}
-                    <Col md="4" sm="12" className="col2">
+                    <Col lg="4" md="12" sm="12" className="col2">
                         <Row>
                             <Col sm="12" md="12" lg="12">
                                 <Card className="card-card1">
