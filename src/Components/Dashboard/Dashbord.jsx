@@ -6,6 +6,7 @@ import SideNav from "../Sidebar/SideNav";
 import { AiFillQuestionCircle } from "react-icons/ai";
 import DChart from "./pieChart";
 import { BiTrendingUp, BiTrendingDown } from "react-icons/bi";
+import { MdKeyboardArrowDown } from "react-icons/md"
 import "./Dashboard.styles.scss";
 
 
@@ -20,7 +21,7 @@ const DashboardPage = () => {
             borderWidth: 10,
             borderColor: "#F0F0F0",
             hoverOffset: 0,
-            radius: '100%',
+            radius: '70%',
             cutout: '75%'
         }]
     })
@@ -68,7 +69,7 @@ const DashboardPage = () => {
                                             <AiFillQuestionCircle style={{color: "#CCCCCC", width: "30px", height: "30px"}}/>
                                         </div>
                                         <p className="stat">12</p>
-                                        <p className="graph1"><BiTrendingUp  className="icon_bg1"/> + 50,3% <span style={{color: "#CCCCCC"}}>vs last week</span></p>
+                                        <p className="graph1"><BiTrendingDown  className="icon_bg1"/> + 50,3% <span style={{color: "#CCCCCC"}}>vs last week</span></p>
                                     </CardBody>
                                 </Card>                             
                             </Col>
@@ -82,20 +83,23 @@ const DashboardPage = () => {
                                     <CardBody className="body1">
                                         <div>
                                             <p className="stat_text">GitHub Statistics</p>
-                                            <DChart data={pieData}/>
+                                            <DChart data={pieData} />
                                             <div className="male_stat">
                                                 <p style={{textAlign: "center", padding: '15px'}}>
                                                     40 % <br /> <span style={{fontSize: '15px'}}>Male</span>
                                                 </p>
                                             </div>
                                             <div className="stat_type">
-                                                <div className="male">
-                                                    <div className="male_color"></div> <p>Male</p>
-                                                </div>
-                                                <div className="female">
-                                                    <div className="female_color"></div> <p>Female</p>
+                                                <div className="d-flex">
+                                                    <div className="male">
+                                                        <div className="male_color"></div><p className="male_text">Male</p>
+                                                    </div>
+                                                    <div className="male">
+                                                        <div className="female_color"></div> <p className="male_text">Female</p>
+                                                    </div>
                                                 </div>
                                             </div>
+                                            <p style={{color: "#CCCCCC"}}>Last 30 days <MdKeyboardArrowDown /> </p>
                                         </div>
                                     </CardBody>
                                 </Card>
