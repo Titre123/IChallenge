@@ -1,10 +1,10 @@
 export const PieData = [
     {
         label: "Male",
-        data: 40 + '%'
+        data: 40
     },
     {
         label: "Female",
-        data: 70 + '%'
+        data: 70
     }
 ]

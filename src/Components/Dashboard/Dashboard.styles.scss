@@ -58,6 +58,41 @@
                 
             }
         }
+        .col2 {
+
+            .card-card1 {
+                border: 0px;
+                background-color: #FFFFFF;
+
+                .body1 {
+                    padding: 5px;
+                    display: flex;
+                    justify-content: center;
+
+                    .stat_text {
+                        font-weight: 600;
+                        font-size: 23px;
+                        color:  #363b64;
+                    }
+                    .male_stat {
+                        margin-left: 20px;
+                        margin-top: -90px;
+                        z-index: 10;
+                        background-color: white;
+                        position: absolute;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 80px;
+                        height: 80px;
+                        border-radius: 50%;
+                        box-shadow: -1px -1px 6px 0px rgba(0,0,0,0.75);
+                        -webkit-box-shadow: -1px -1px 6px 0px rgba(0,0,0,0.75);
+                        -moz-box-shadow: -1px -1px 6px 0px rgba(0,0,0,0.75);
+                    }
+                }
+            }
+        }
     }
     @media (min-width: 768px) and (max-width: 979px) {
         .user_numbers {

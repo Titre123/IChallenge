@@ -10,13 +10,18 @@ import "./Dashboard.styles.scss";
 
 
 const DashboardPage = () => {
-
+    
     const [ pieData, setPieData ] = useState({
-        label: PieData.map((data) => data.label),
+        labels: PieData.map((data) => data.label),
         datasets: [{
-            label: "Commit statistics",
-            data: [40, 70],
-            backgroundColor: ["#8BBFFD, #FFC152"]
+            label: "statistics",
+            data: PieData.map((data) => data.data),
+            backgroundColor: ["#FFC152", "#8BBFFD"],
+            borderWidth: 10,
+            borderColor: "#F0F0F0",
+            hoverOffset: 0,
+            radius: '100%',
+            cutout: '75%'
         }]
     })
 
@@ -73,9 +78,25 @@ const DashboardPage = () => {
                     <Col md="4" sm="12" className="col2">
                         <Row>
                             <Col sm="12" md="12" lg="12">
-                                <Card>
-                                    <CardBody>
-                                        <DChart data={pieData}/>
+                                <Card className="card-card1">
+                                    <CardBody className="body1">
+                                        <div>
+                                            <p className="stat_text">GitHub Statistics</p>
+                                            <DChart data={pieData}/>
+                                            <div className="male_stat">
+                                                <p style={{textAlign: "center", padding: '15px'}}>
+                                                    40 % <br /> <span style={{fontSize: '15px'}}>Male</span>
+                                                </p>
+                                            </div>
+                                            <div className="stat_type">
+                                                <div className="male">
+                                                    <div className="male_color"></div> <p>Male</p>
+                                                </div>
+                                                <div className="female">
+                                                    <div className="female_color"></div> <p>Female</p>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </CardBody>
                                 </Card>
                             </Col>
