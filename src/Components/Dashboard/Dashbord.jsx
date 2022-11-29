@@ -34,22 +34,21 @@ const DashboardPage = () => {
             label: "likes",
             data: BarData.map((data) => data.data),
             backgroundColor: BarData.map(data => data.bg),
-            barThickness: 10,
-            borderRadius: 10,
-            margin: 10
+            barThickness: 12,
+            borderRadius: 10
         },
         {
             label: "comments",
             data: BarData1.map((data) => data.data),
             backgroundColor: BarData1.map(data => data.bg),
-            barThickness: 10,
+            barThickness: 12,
             borderRadius: 10
         },
         {
             label: "shares",
             data: BarData2.map((data) => data.data),
             backgroundColor: BarData2.map(data => data.bg),
-            barThickness: 10,
+            barThickness: 12,
             borderRadius: 10
         },]
     });
@@ -104,9 +103,11 @@ const DashboardPage = () => {
                         </Row>
                         <Row>
                             <Col lg="12" md="12" sm="12">
-                                <Card>
+                                <Card style={{position: "relative", display:"block"}}>
                                     <CardBody>
-                                        <BarChart data={barData}/>
+                                        <div  style={{width:"768px", marginTop: "100px", fontSize: "30px", fontWeight: 600}}>
+                                            <BarChart data={barData} />
+                                        </div>
                                     </CardBody>
                                 </Card>
                             </Col>
