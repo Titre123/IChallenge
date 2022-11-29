@@ -5,6 +5,7 @@ import { GiSlumberingSanctuary } from "react-icons/gi";
 import { AiFillEye, AiFillGithub } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import "./sign.css";
 
 const SignIn = () => {
 
@@ -21,7 +22,7 @@ const SignIn = () => {
         type = 'password'
     }
     return(
-        <div className="Sign_up container">
+        <div className="Sign_up containers">
             <div className="sign_row">
                 <div></div>
                 <div className="col1" style={{'display': 'flex', 'justifyContent': 'center'}}>

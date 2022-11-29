@@ -6,8 +6,6 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <React.Fragment>
-      <div></div>
       <div className="App">
         <Router>
           <Routes>
@@ -17,8 +15,6 @@ function App() {
           </Routes>
         </Router>
       </div>
-      <div></div>
-    </React.Fragment>
   );
 }
 
