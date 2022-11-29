@@ -7,6 +7,9 @@ import { AiFillQuestionCircle } from "react-icons/ai";
 import DChart from "./pieChart";
 import  { BarData, BarData1, BarData2 } from "./Bar";
 import BarChart from "./BarChart";
+import { BsFillSuitHeartFill } from "react-icons/bs";
+import { RiMessage2Fill } from "react-icons/ri";
+import { TfiSharethisAlt } from "react-icons/tfi"
 import { BiTrendingUp, BiTrendingDown } from "react-icons/bi";
 import { MdKeyboardArrowDown } from "react-icons/md"
 import "./Dashboard.styles.scss";
@@ -103,9 +106,30 @@ const DashboardPage = () => {
                         </Row>
                         <Row>
                             <Col lg="12" md="12" sm="12">
-                                <Card style={{position: "relative", display:"block"}}>
+                                <Card className="main_stat_card">
                                     <CardBody>
-                                        <div  style={{width:"768px", marginTop: "100px", fontSize: "30px", fontWeight: 600}}>
+                                        <p className="main_stat_heading">GitHub Statistics</p>
+                                        <Row className="subheading">
+                                            <Col className="avg_like" lg="4" md="12" sm="12">
+                                                <div className="avg_like_icon"><BsFillSuitHeartFill className="like_icon"/></div>
+                                                <div className="num">7.006 <span>+ 10,3 %</span>
+                                                    <p className="avg_text">Avg likes this week</p>
+                                                </div>
+                                            </Col>
+                                            <Col className="avg_like" lg="4" md="12" sm="12">
+                                                <div className="avg_comment_icon"><RiMessage2Fill className="comment_icon"/></div>
+                                                <div className="comment_num">7.006 <span>+ 10,3 %</span>
+                                                    <p className="avg_comment">Avg comments this week</p>
+                                                </div>
+                                            </Col>
+                                            <Col className="avg_like" lg="4" md="12" sm="12">
+                                                <div className="avg_share_icon"><TfiSharethisAlt className="share_icon"/></div>
+                                                <div className="share_num">7.006 <span>+ 10,3 %</span>
+                                                    <p className="avg_share">Avg share this week</p>
+                                                </div>
+                                            </Col>
+                                        </Row>
+                                        <div  style={{ marginTop: "30px"}}>
                                             <BarChart data={barData} />
                                         </div>
                                     </CardBody>
@@ -141,7 +165,7 @@ const DashboardPage = () => {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <p style={{color: "#CCCCCC"}}>Last 30 days <MdKeyboardArrowDown /> </p>
+                                            <p className="btm_text" style={{color: "#CCCCCC"}}>Last 30 days <MdKeyboardArrowDown /> </p>
                                         </div>
                                     </CardBody>
                                 </Card>

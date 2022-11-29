@@ -8,7 +8,7 @@ export const BarData = [
         {
         date: "2 Nov",
         labels: "likes",
-        data : 4800,
+        data : 3450,
         bg: "#A158FF"
     },
         {
@@ -59,7 +59,7 @@ export const BarData1 = [
     {
         date: "1 Nov",
         labels: "comments",
-        data : 3200,
+        data : 1200,
         bg: "#FFC266"
     },
         {

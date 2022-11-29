@@ -4,6 +4,7 @@
 
     .sideBar {
         position: fixed;
+        z-index: 100;
     }
     .bd {
         flex: 7;
@@ -56,6 +57,90 @@
                     }
                 }
                 
+            }
+        }
+        .main_stat_card {
+            margin-top: 20px;
+            border: 0px;
+            border-radius: 20px;
+
+            .main_stat_heading {
+                font-size: 25px;
+                color:#363b64;
+                font-weight: 500;
+            };
+
+            .subheading {
+                display: flex;
+                align-items: center;
+
+                .avg_like {
+                    display: flex;
+                    margin-right: 15px;
+
+                    .avg_like_icon, .avg_comment_icon, .avg_share_icon {
+                        width: 30px;
+                        height: 30px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 50%;
+                        background-color: #ECDEFF;
+                        margin-right: 8px;
+
+                        .like_icon {
+                            color: #A158FF;
+                        }
+                    }
+                    .num {
+                        color:#363b64;
+                        font-weight: 500;
+                        span {
+                            color: #6B8EF8;
+                        }
+                        .avg_text {
+                            font-weight: 400;
+                            color: #999999;
+                        }
+                    }
+                    .avg_comment_icon {
+                        background-color: #FFF3E0;
+
+                        .comment_icon {
+                            color: #E2B931;
+                        }
+                    }
+                    .comment_num {
+                        color:#363b64;
+                        font-weight: 500;
+                        span {
+                            color: #EB5757;
+                        }
+                        .avg_comment {
+                            font-weight: 400;
+                            color: #999999;
+                        }
+                    }
+                    .avg_share_icon {
+                        background-color: #D3E7FF;
+
+                        .share_icon {
+                            color: #567EF7;
+                        }
+                    }
+                    .share_num {
+                        color:#363b64;
+                        font-weight: 500;
+
+                        span {
+                            color: #6B8EF8;
+                        }
+                        .avg_share {
+                            font-weight: 400;
+                            color: #999999;
+                        }
+                    }
+                }
             }
         }
         .col2 {
@@ -157,10 +242,46 @@
         .user_numbers {
             width: 100%;
         }
+        .col2 {
+            margin-top: 20px;
+            .card-card1 {
+
+                .body1 {
+
+                    .stat_text {
+                        text-align: center;
+                        margin-bottom: 10px;
+                    }
+                    .btm_text {
+                        text-align: center;
+                        margin-top: 15px;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
     }
     @media (max-width: 767px) {
         .user_numbers {
             margin: 5px;
+        }
+        .col2 {
+            margin-top: 20px;
+            .card-card1 {
+
+                .body1 {
+
+                    .stat_text {
+                        text-align: center;
+                        margin-bottom: 10px;
+                    }
+                    .btm_text {
+                        text-align: center;
+                        margin-top: 15px;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
         }
     }
 }
