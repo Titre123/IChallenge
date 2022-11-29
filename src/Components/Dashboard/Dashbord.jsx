@@ -1,10 +1,12 @@
 import React, {useState} from "react";
 import Nav from "../Navbar/Navbar";
-import { Row, Col, Card, CardBody, Container } from "reactstrap";
+import { Row, Col, Card, CardBody, Container, Util } from "reactstrap";
 import { PieData } from "./pie";
 import SideNav from "../Sidebar/SideNav";
 import { AiFillQuestionCircle } from "react-icons/ai";
 import DChart from "./pieChart";
+import  { BarData, BarData1, BarData2 } from "./Bar";
+import BarChart from "./BarChart";
 import { BiTrendingUp, BiTrendingDown } from "react-icons/bi";
 import { MdKeyboardArrowDown } from "react-icons/md"
 import "./Dashboard.styles.scss";
@@ -24,7 +26,33 @@ const DashboardPage = () => {
             radius: '70%',
             cutout: '75%'
         }]
-    })
+    });
+
+    const [ barData, setBarData ] = useState({
+        labels: BarData.map((data) => data.date),
+        datasets: [{
+            label: "likes",
+            data: BarData.map((data) => data.data),
+            backgroundColor: BarData.map(data => data.bg),
+            barThickness: 10,
+            borderRadius: 10,
+            margin: 10
+        },
+        {
+            label: "comments",
+            data: BarData1.map((data) => data.data),
+            backgroundColor: BarData1.map(data => data.bg),
+            barThickness: 10,
+            borderRadius: 10
+        },
+        {
+            label: "shares",
+            data: BarData2.map((data) => data.data),
+            backgroundColor: BarData2.map(data => data.bg),
+            barThickness: 10,
+            borderRadius: 10
+        },]
+    });
 
     return(
         <div className="Dashboard">
@@ -74,6 +102,15 @@ const DashboardPage = () => {
                                 </Card>                             
                             </Col>
                         </Row>
+                        <Row>
+                            <Col lg="12" md="12" sm="12">
+                                <Card>
+                                    <CardBody>
+                                        <BarChart data={barData}/>
+                                    </CardBody>
+                                </Card>
+                            </Col>
+                        </Row>
                     </Col>
                     {/* pie chart column */}
                     <Col lg="4" md="12" sm="12" className="col2">
@@ -84,6 +121,10 @@ const DashboardPage = () => {
                                         <div>
                                             <p className="stat_text">GitHub Statistics</p>
                                             <DChart data={pieData} />
+                                            <div className="chart_stat">
+                                                <p className="chart_text">2,9 M </p>
+                                                <div className="d-flex align-items-center chart_text1"><BiTrendingUp  className="icon_bg1" style={{width: "20px", height:"20px"}}/><span className="stat_stat">+ 300K</span></div>
+                                            </div>
                                             <div className="male_stat">
                                                 <p style={{textAlign: "center", padding: '15px'}}>
                                                     40 % <br /> <span style={{fontSize: '15px'}}>Male</span>

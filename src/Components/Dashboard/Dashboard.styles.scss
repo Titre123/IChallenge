@@ -77,6 +77,30 @@
                         color:  #363b64;
                         margin-top: 20px;
                     }
+                    .chart_stat {
+                        margin-left: 110px;
+                        margin-top: -190px;
+                        position: absolute;
+
+                        .chart_text {
+                            text-align: center;
+                            font-size: 30px;
+                            color:  #363b64;
+                            font-weight: 700;
+                        }
+                        .chart_text1 {
+                            color:#567EF7;
+
+                            .icon_bg1 {
+                                background-color: #E4EAFE;
+                                padding: 3px;
+                            }
+                            .stat_stat {
+                                font-weight: 500;
+                                font-size: 17px;
+                            }
+                        }
+                    }
                     .male_stat {
                         margin-left: 20px;
                         margin-top: -120px;
