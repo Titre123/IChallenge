@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import Nav from "../Navbar/Navbar";
-import { Row, Col, Card, CardBody, Container, Util } from "reactstrap";
+import { Row, Col, Card, CardBody, Container } from "reactstrap";
 import { PieData } from "./pie";
 import SideNav from "../Sidebar/SideNav";
 import { AiFillQuestionCircle } from "react-icons/ai";
