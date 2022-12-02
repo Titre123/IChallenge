@@ -11,12 +11,6 @@ const SignIn = () => {
         event.preventDefault()
     }
 
-    const style = {'border': '1px solid #727070'}
-
-    const changeStyle = () =>{
-        style.border = 'none'
-    }
-
     return(
         <div className="Sign_up">
             <Row className="sign_row">
@@ -46,7 +40,7 @@ const SignIn = () => {
                                     <Input type="email" placeholder="Enter your email" className="input-input" name="email" required />
                                 </FormGroup>
                                 <FormGroup className="card_form_group1">
-                                    <InputGroup className="i_group" onClick={changeStyle} style={style}>
+                                    <InputGroup className="i_group">
                                         <Input type="password" placeholder="password" className="input-input" name="password" required />
                                         <AiFillEye className="eye"/>
                                     </InputGroup>

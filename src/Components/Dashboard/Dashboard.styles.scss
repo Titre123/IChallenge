@@ -71,12 +71,11 @@
             };
 
             .subheading {
-                display: flex;
                 align-items: center;
 
                 .avg_like {
                     display: flex;
-                    margin-right: 15px;
+                    margin-right: 5px;
 
                     .avg_like_icon, .avg_comment_icon, .avg_share_icon {
                         width: 30px;

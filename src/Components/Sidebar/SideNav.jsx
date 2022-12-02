@@ -28,7 +28,7 @@ const SideNav = () => {
                 <div className="user_social">
                     <ImSphere style={{width: "30px", height: "30px", color: "#775DA6", marginRight: "15px"}} />
                     <div className="user_mail">
-                        <p>@illiyinStudio <br /> <span className="instagram">Instagram</span></p>
+                        <p style={{color: "#363b64"}}>@illiyinStudio <br /> <span className="instagram">Instagram</span></p>
                         <div className="forwar_bacward_icons">
                             {
                                 collapse ? <IoIosArrowDown style={{width: "27px", height: "27px", color: "#775DA6", marginRight: "10px"}}/> : <IoIosArrowForward style={{width: "27px", height: "27px", color: "#775DA6", marginRight: "10px"}}/>
