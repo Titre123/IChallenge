@@ -7,6 +7,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { signInWithGitHub } from '../../firebase';
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../../firebase"
+import { useState } from "react";
 
 const SignIn = () => {
     const [user, loading, error] = useAuthState(auth);
@@ -20,36 +21,41 @@ const SignIn = () => {
         if (user) navigate("/");
         }, [user, loading]);
 
+    const [statedType, setstatedType] = useState(false)
+
     const handleSubmit = (event) => {
         event.preventDefault()
     }
-
-    const style = {'border': '1px solid #727070'}
-
-    const changeStyle = () =>{
-        style.border = 'none'
+    let type;
+    if (statedType == true){
+        type = 'text';
     }
-
+    else {
+        type = 'password'
+    }
     return(
-        <div className="Sign_up">
-            <Row className="sign_row">
-                <Col md="6" sm="12" className="sign_col1">
-                    <div>
-                        <div className="d-flex align-items-center name_heading">
-                            <GiSlumberingSanctuary className="ic_icon"/>
-                            <h2 className="name">IChallenge</h2>
-                        </div>
-                        <div className="welcome_back">
-                            <h2>Welcome back <br /> to IChallenge</h2>
-                        </div>
-                        <div className="text">
-                            <p className="paragraph">
-                                Stop wasting time with frustrating platforms.<br /> Build beautiful courses & contents with ease. Get started<br /> in minutes with our unique & simple authoring tool. 
-                            </p>
-                        </div>
+        <div className="Sign_up containers">
+            <div className="sign_row">
+                <div></div>
+                <div className="col1" style={{'display': 'flex', 'justifyContent': 'center'}}>
+                    <div md="6" sm="12" className="sign_col1">
+                    <div className="d-flex align-items-center name_heading" style={{'width': '25em'}}>
+                        <GiSlumberingSanctuary className="ic_icon"/>
+                        <h2 className="name">IChallenge</h2>
                     </div>
-                </Col>
-                <Col md="6" sm="12" className="sign_col2">
+                    <div className="welcome_back">
+                        <h2>Welcome back <br /> to IChallenge</h2>
+                    </div>
+                    <div className="text">
+                        <p className="paragraph">
+                            Stop wasting time with frustrating platforms.<br /> Build beautiful courses & contents with ease. Get started<br /> in minutes with our unique & simple authoring tool. 
+                        </p>
+                    </div>
+                </div>
+                </div>
+                <div></div>
+                <div md="6" sm="12" className="sign_col2">
+                    <div></div>
                     <Card className="sign_form">
                         <CardBody className="sign_card_body">
                             <h2>Sign In</h2>
@@ -59,9 +65,9 @@ const SignIn = () => {
                                     <Input type="email" placeholder="Enter your email" className="input-input" name="email" required />
                                 </FormGroup>
                                 <FormGroup className="card_form_group1">
-                                    <InputGroup className="i_group" onClick={changeStyle} style={style}>
-                                        <Input type="password" placeholder="password" className="input-input" name="password" required />
-                                        <AiFillEye className="eye"/>
+                                    <InputGroup className="i_group" >
+                                        <Input type={type} placeholder="password" className="input-input" name='password' required />
+                                        <AiFillEye className="eye" onClick={() => setstatedType(prev => !prev)}/>
                                     </InputGroup>
                                 </FormGroup>
                                 <div><FormText><a href="#" className="f_password">Forgot password?</a></FormText></div>
@@ -79,8 +85,9 @@ const SignIn = () => {
                             </div>
                         </CardBody>
                     </Card>
-                </Col>
-            </Row>
+                </div>
+                <div></div>
+            </div>
         </div>
     )
 }

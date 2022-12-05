@@ -1,15 +1,12 @@
 .Sign_up {
-    background-color: #F9F9F9;
-    height: auto;
     align-items: center;
     .sign_row {
-
+        display: grid;
+        grid-template-columns: minmax(0.5em,2em) 1fr minmax(0.5em, 2em) 1fr minmax(0.5em, 2em);
+        align-items: center;
         .sign_col1 {
-            margin: auto;
             justify-items: center;
             vertical-align: middle;
-            padding-top: 3%;
-            padding-left: 10%;
             
             .name_heading {
                 margin-bottom: 25px;
@@ -38,13 +35,14 @@
             }
         }
         .sign_col2 {
-            padding-top: 1%;
-            padding-right: 2%;
-            margin: auto;
-            
+            display: flex;
+            justify-content: center;
             .sign_form {
                 border-radius: 10px;
-                width: 450px;
+                box-shadow: 0px 10px 15px -8px rgba(0, 0, 0, 0.63);
+                // width: 450px;
+                min-width: 20em;
+                max-width: 25em;
                 padding: 5px 10px;
                 .sign_card_body {
                     
@@ -59,14 +57,17 @@
                     .card_form_group {
                         margin-top: 15px;
                         margin-bottom: 5px;
-                        .form-control {
+                        .form-control{
+                            border: 1px solid #775DA6;
+                            // padding: 12px;
+                        }
+                        .form-control:focus {
                             width: 98%;
                             background-color: white;
                             border: 0px;
-                            padding: 12px;
-                            box-shadow: -2px 1px 13px -4px rgba(0,0,0,0.75);
-                            -webkit-box-shadow: -2px 1px 13px -4px rgba(0,0,0,0.75);
-                            -moz-box-shadow: -2px 1px 13px -4px rgba(0,0,0,0.75);
+                            // padding: 12px;
+                            box-shadow: none;
+                            outline: 2px solid #775DA6;
                         }
                         .form-control:focus{
                             border: none;
@@ -81,17 +82,18 @@
                             display: flex;
                             align-items: center;
                             vertical-align: middle;
-                            width: 98%;
-                            border: 0;
-                            border-radius: 8px;
-                            box-shadow: -2px 1px 13px -4px rgba(0,0,0,0.75);
-                            -webkit-box-shadow: -2px 1px 13px -4px rgba(0,0,0,0.75);
-                            -moz-box-shadow: -2px 1px 13px -4px rgba(0,0,0,0.75);
-
+                            // width: 100%;
+                            border: 1px solid #775DA6;
+                            border-radius: 6px;
+                            
+                            .input-input:focus {
+                                box-shadow: none;
+                                border-color: white;
+                            }
                             .form-control {
-                                width: 90%;
+                                width: 80%;
                                 border: 0px;
-                                padding: 12px;
+                                // padding: 12px;
                                 border-right: 0px;
                             }
 
@@ -99,6 +101,9 @@
                                 margin: 10px;
                                 color: grey
                             }
+                        }
+                        .i_group:hover{
+                            outline: 1.5px solid #775DA6;;
                         }
                     }
                     .f_password {
@@ -110,9 +115,9 @@
                     .form_submit_btn {
                         margin-top: 10px;
                         border-radius: 10px;
-                        padding: 12px;
+                        padding: 10px;
                         width: 100%;
-                        background-color: #775DA6;
+                        background-color: rgb(119, 93, 166);
                         color: white;
                     }
 
@@ -137,9 +142,10 @@
                         }
                         .git:hover {
 
-                            box-shadow: -2px 1px 13px -4px rgba(0,0,0,0.75);
-                            -webkit-box-shadow: -2px 1px 13px -4px rgba(0,0,0,0.75);
-                            -moz-box-shadow: -2px 1px 13px -4px rgba(0,0,0,0.75);
+                            border-radius: 10px;
+                            box-shadow: -3px 5px 15px -8px rgb(119, 93, 166, 0.63);
+                            -webkit-box-shadow: -2px 1px 13px -4px rgb(119, 93, 166, 0.63);
+                            -moz-box-shadow: -2px 1px 13px -4px rgb(119, 93, 166, 0.63);
                         }
                     }
                     .c_write {
@@ -166,4 +172,3 @@
         }
     }
 }
-
