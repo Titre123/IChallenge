@@ -4,7 +4,7 @@ import "./sign.styles.scss";
 import { GiSlumberingSanctuary } from "react-icons/gi";
 import { AiFillEye, AiFillGithub } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
-import { signInWithGitHub } from '../../firebase';
+import { signInWithGitHub, logout } from '../../firebase';
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../../firebase"
 import { useState } from "react";
@@ -13,13 +13,14 @@ const SignIn = () => {
     const [user, loading, error] = useAuthState(auth);
     const navigate = useNavigate();
 
-    useEffect(() => {
-        if (loading) {
-        // maybe trigger a loading screen
-        return;
-        }
-        if (user) navigate("/");
-        }, [user, loading]);
+    // useEffect(() => {
+    //     if (loading) {
+    //     // maybe trigger a loading screen
+    //     return;
+    //     }
+    //     if (user) navigate("/dashboard");
+    //     else navigate("/signin");
+    //     }, [user, loading]);
 
     const [statedType, setstatedType] = useState(false)
 
@@ -38,7 +39,7 @@ const SignIn = () => {
             <div className="sign_row">
                 <div></div>
                 <div className="col1" style={{'display': 'flex', 'justifyContent': 'center'}}>
-                    <div md="6" sm="12" className="sign_col1">
+                    <div className="sign_col1">
                     <div className="d-flex align-items-center name_heading" style={{'width': '25em'}}>
                         <GiSlumberingSanctuary className="ic_icon"/>
                         <h2 className="name">IChallenge</h2>
@@ -54,7 +55,7 @@ const SignIn = () => {
                 </div>
                 </div>
                 <div></div>
-                <div md="6" sm="12" className="sign_col2">
+                <div className="sign_col2">
                     <div></div>
                     <Card className="sign_form">
                         <CardBody className="sign_card_body">

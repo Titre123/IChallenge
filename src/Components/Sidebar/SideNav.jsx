@@ -8,6 +8,7 @@ import { RiLogoutBoxRFill } from "react-icons/ri";
 import { MdSpaceDashboard, MdPeople, MdSettings, MdHeadphones } from "react-icons/md";
 import { TbCalendarStats } from "react-icons/tb";
 import { Link } from "react-router-dom";
+import { logout } from "../../firebase";
 
 
 const SideNav = () => {
@@ -21,7 +22,7 @@ const SideNav = () => {
     return(
         <div className="side_nav">
             <div className="brand_heading">
-                <GiSlumberingSanctuary style={{width: "30px", height: "30px", color: "#775DA6"}}/> <Link to="/" style={{color: "black", textDecoration: "none"}}><h2 className="brand">IChanllenge</h2></Link>
+                <GiSlumberingSanctuary style={{width: "30px", height: "30px", color: "#775DA6"}}/> <Link to="/" style={{color: "black", textDecoration: "none"}}><h2 className="brand">IChallenge</h2></Link>
             </div>
 
             <div className="user_socialmedia_accordion" onClick={toggleCollapse}>
@@ -68,7 +69,7 @@ const SideNav = () => {
                     <li className="lists"><MdHeadphones style={{width: "27px", height: "27px", color: "#775DA6", marginRight: "10px"}} /> Admin</li>
                 </Link>
                 <Link to="#" className="dash">
-                    <li className="lists"><RiLogoutBoxRFill style={{width: "27px", height: "27px", color: "#775DA6", marginRight: "10px"}} /> Logout</li>
+                    <li className="lists" onClick={logout} ><RiLogoutBoxRFill style={{width: "27px", height: "27px", color: "#775DA6", marginRight: "10px"}}/> Logout</li>
                 </Link>
             </ul>
         </div>
