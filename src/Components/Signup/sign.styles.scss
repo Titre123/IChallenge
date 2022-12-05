@@ -159,5 +159,16 @@
 
             }
         }
+        @media (max-width: 767px) {
+            .sign_col1 {
+                display: flex;
+                justify-content: center;
+            }
+            .sign_col2 {
+                margin-top: 30px;
+                justify-content: center;
+                display: flex;
+            }
+        }
     }
 }
