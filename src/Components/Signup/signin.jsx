@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Col, Row, Card, CardBody, Form, FormGroup, InputGroup, Input, FormText } from "reactstrap";
 import "./sign.styles.scss";
 import { GiSlumberingSanctuary } from "react-icons/gi";
@@ -8,7 +8,17 @@ import { Link } from "react-router-dom";
 const SignIn = () => {
 
     const handleSubmit = (event) => {
-        event.preventDefault()
+        event.preventDefault();
+
+    }
+    const [ Type, setType ] = useState(false);
+    const toggle = () => setType(!Type)
+    let type;
+
+    if (Type == true) {
+        type = "text"
+    } else {
+        type = "password"
     }
 
     return(
@@ -41,12 +51,12 @@ const SignIn = () => {
                                 </FormGroup>
                                 <FormGroup className="card_form_group1">
                                     <InputGroup className="i_group">
-                                        <Input type="password" placeholder="password" className="input-input" name="password" required />
-                                        <AiFillEye className="eye"/>
+                                        <Input type={type} placeholder="password" className="input-input" name="password" required />
+                                        <AiFillEye className="eye" onClick={toggle}/>
                                     </InputGroup>
                                 </FormGroup>
                                 <div><FormText><a href="#" className="f_password">Forgot password?</a></FormText></div>
-                                <Button type="submit" value="submit" className="form_submit_btn">Submit</Button>
+                                <Link to="/dashboard"><Button type="submit" value="submit" className="form_submit_btn">Submit</Button></Link>
                             </Form>
                             <div className="line">
                                 <hr style={{width:"50%", marginRight: "4px"}}/> or <hr style={{width:"50%", marginLeft: "4px"}}/>

@@ -62,7 +62,7 @@
                         .form-control {
                             width: 98%;
                             background-color: white;
-                            border: 0px;
+                            border: 1px solid #775DA6;
                             padding: 12px;
                             box-shadow: -2px 1px 13px -4px rgba(0,0,0,0.75);
                             -webkit-box-shadow: -2px 1px 13px -4px rgba(0,0,0,0.75);
@@ -82,7 +82,7 @@
                             align-items: center;
                             vertical-align: middle;
                             width: 98%;
-                            border: 0px;
+                            border: 1px solid #775DA6;
                             border-radius: 8px;
                             box-shadow: -2px 1px 13px -4px rgba(0,0,0,0.75);
                             -webkit-box-shadow: -2px 1px 13px -4px rgba(0,0,0,0.75);
@@ -98,9 +98,9 @@
                                 margin: 10px;
                                 color: grey
                             }
+                        &:hover {
+                            outline: 2.5px solid #775DA6;
                         }
-                        &:focus {
-                            border: 2.5px solid #775DA6;
                         }
                     }
                     .f_password {

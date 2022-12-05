@@ -10,7 +10,8 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route exact path='/' element={<DashboardPage />} />
+          <Route exact path='/' element={<SignIn />} />
+          <Route exact path='/dashboard' element={<DashboardPage />} />
           <Route exact path='/signin' element={<SignIn />} />
           <Route exact path='/signup' element={<SignUp />} />
         </Routes>

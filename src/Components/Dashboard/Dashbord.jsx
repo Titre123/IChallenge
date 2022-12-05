@@ -3,6 +3,7 @@ import Nav from "../Navbar/Navbar";
 import { Row, Col, Card, CardBody, Container } from "reactstrap";
 import { PieData } from "./pie";
 import SideNav from "../Sidebar/SideNav";
+import Commits from "./commit/commit";
 import { AiFillQuestionCircle } from "react-icons/ai";
 import DChart from "./pieChart";
 import  { BarData, BarData1, BarData2 } from "./Bar";
@@ -169,6 +170,13 @@ const DashboardPage = () => {
                                         </div>
                                     </CardBody>
                                 </Card>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col sm="12" md="12" lg="12">
+                                <div className="cmt">
+                                    <Commits />
+                                </div>
                             </Col>
                         </Row>
                     </Col>

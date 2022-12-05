@@ -1,0 +1,39 @@
+.commit {
+    .commit_card {
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 0px;
+
+        .commit_title {
+            color:#363b64;
+            font-size: 26px;
+            font-weight: 700;
+        }
+        .divBody {
+
+            .fill_row {
+                margin-top: 0px;
+
+                .fill, .fill1, .fill2, .fill3 {
+                    width: 40px;
+                    height: 20px;
+                    background-color: #DDE5FD;
+                    margin: 5px;
+                    border-radius: 5px;
+                }
+                .fill1 {
+                    background-color: #9AB2FA;
+                }
+                .fill2 {
+                    background-color: #567EF7;
+                }
+                .date {
+                    width: 50px;
+
+                }
+            }
+        }
+    }
+}

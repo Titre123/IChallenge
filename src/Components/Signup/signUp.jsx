@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Col, Row, Card, CardBody, Form, FormGroup, InputGroup, Input, FormText } from "reactstrap";
 import "./sign.styles.scss";
 import { GiSlumberingSanctuary } from "react-icons/gi";
@@ -9,6 +9,15 @@ const SignUp = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault()
+    }
+    const [ Type, setType ] = useState(false);
+    const toggle = () => setType(!Type)
+    let type;
+
+    if (Type == true) {
+        type = "text"
+    } else {
+        type = "password"
     }
 
     return(
@@ -44,8 +53,8 @@ const SignUp = () => {
                                 </FormGroup>
                                 <FormGroup className="card_form_group1">
                                     <InputGroup className="i_group">
-                                        <Input type="password" placeholder="password" name="password" className="input-input" required />
-                                        <AiFillEye className="eye"/>
+                                        <Input type={type} placeholder="password" name="password" className="input-input" required />
+                                        <AiFillEye className="eye" onClick={toggle}/>
                                     </InputGroup>
                                 </FormGroup>
                                 <Button type="submit" value="submit" className="form_submit_btn">Create an account</Button>
