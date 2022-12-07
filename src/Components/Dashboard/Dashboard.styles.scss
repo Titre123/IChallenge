@@ -2,6 +2,8 @@
     display: flex;
     font-size: 20px;
     font-family: 'overpass', sans-serif;
+    background-color: #fff;
+    min-height: 100vh;
 
     .sideBar {
         position: fixed;
@@ -107,7 +109,7 @@
                         .avg_text {
                             font-weight: 400;
                             color: #999999;
-                            font-size: 1rem;
+                            font-size: 0.9rem;
                         }
                     }
                     .avg_comment_icon {
@@ -127,7 +129,7 @@
                         .avg_comment {
                             font-weight: 400;
                             color: #999999;
-                            font-size: 1rem;
+                            font-size: 0.9rem;
                         }
                     }
                     .avg_share_icon {
@@ -148,7 +150,7 @@
                         .avg_share {
                             font-weight: 400;
                             color: #999999;
-                            font-size: 1rem;
+                            font-size: 0.9rem;
                         }
                     }
                 }
@@ -217,31 +219,27 @@
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        margin-top: -20px;
+                        gap: 1em;
 
                         .male {
                             display: flex;
-                            align-items: center;
-                            margin-right: 20px;
+                            align-items: flex-start;
+                            gap: 0.5em;
 
                             .male_color {
                                 width: 20px;
                                 height: 20px;
                                 background-color: #8BBFFD;
                                 border-radius: 50%;
-                                margin-right: 9px;
                             }
                             .male_text {
-                                display: flex;
-                                margin-top: 15px;
-                                font-size: 15px;
+                                font-size: 1rem;
                             }
                             .female_color {
                                 background-color: #FFC152;
                                 width: 20px;
                                 height: 20px;
                                 border-radius: 50%;
-                                margin-right: 9px;
                             }
                         }
                     }

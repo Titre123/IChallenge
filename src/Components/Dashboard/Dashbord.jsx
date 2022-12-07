@@ -11,10 +11,8 @@ import { BsFillSuitHeartFill } from "react-icons/bs";
 import { RiMessage2Fill } from "react-icons/ri";
 import { TfiSharethisAlt } from "react-icons/tfi"
 import { BiTrendingUp, BiTrendingDown } from "react-icons/bi";
-import { MdKeyboardArrowDown } from "react-icons/md"
+import { MdKeyboardArrowDown } from "react-icons/md";
 import "./Dashboard.styles.scss";
-import { TbDivide } from "react-icons/tb";
-
 
 const DashboardPage = () => {
     
@@ -146,25 +144,25 @@ const DashboardPage = () => {
                                     <CardBody className="body1">
                                         <div>
                                             <p className="stat_text">GitHub Statistics</p>
-                                            <DChart data={pieData} />
+                                            <DChart data={pieData}/>
                                             <div className="chart_stat">
                                                 <p className="chart_text">2,9 M </p>
                                                 <div className="d-flex align-items-center chart_text1"><BiTrendingUp  className="icon_bg1" style={{width: "20px", height:"20px"}}/><span className="stat_stat">+ 300K</span></div>
                                             </div>
                                             <div className="male_stat">
-                                                <p style={{textAlign: "center", padding: '15px'}}>
-                                                    40 % <br /> <span style={{fontSize: '15px'}}>Male</span>
+                                                <p style={{textAlign: "center", display: "flex", justifyContent: "center", flexDirection: 'column', margin: '0px'}}>
+                                                    40% <span style={{fontSize: '1rem'}}>Male</span>
                                                 </p>
                                             </div>
                                             <div className="stat_type">
-                                                <div className="d-flex">
                                                     <div className="male">
-                                                        <div className="male_color"></div><p className="male_text">Male</p>
+                                                        <div className="male_color"></div>
+                                                        <div className="male_text">Male</div>
                                                     </div>
                                                     <div className="male">
-                                                        <div className="female_color"></div> <p className="male_text">Female</p>
+                                                        <div className="female_color"></div>
+                                                        <p className="male_text">Female</p>
                                                     </div>
-                                                </div>
                                             </div>
                                             <p className="btm_text" style={{color: "#CCCCCC"}}>Last 30 days <MdKeyboardArrowDown /> </p>
                                         </div>

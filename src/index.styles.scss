@@ -36,6 +36,7 @@ body {
     text-rendering: optimizeSpeed;
     line-height: 1.5;
     background-color: #F9F9F9;
+    padding: 0;
 }
 
 /* A elements that don't have a class get default styles */
@@ -91,4 +92,13 @@ select {
     justify-content: center;
     align-items: center;
     // padding-inline: 2em;
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+    .num,
+    .comment_num,
+    .share_num {
+        font-size: 1rem;
+    }
 }
