@@ -93,12 +93,3 @@ select {
     align-items: center;
     // padding-inline: 2em;
 }
-
-@media (min-width: 768px) and (max-width: 979px) {
-
-    .num,
-    .comment_num,
-    .share_num {
-        font-size: 1rem;
-    }
-}

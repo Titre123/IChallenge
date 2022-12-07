@@ -29,11 +29,11 @@ const SignIn = () => {
     const type = statedType ? 'text' : 'password'
     
     return(
-        <div className="Sign_up container">
+        <div className="Sign_up">
             <div className="sign_row">
                 <div></div>
-                <div className="col1" style={{'display': 'flex', 'justifyContent': 'center'}}>
-                    <div md="6" sm="12" className="sign_col1">
+                <div className="col1" style={{'display': 'flex', 'justifyContent': 'center', minWidth: '20em', maxWidth: '25em'}}>
+                    <div className="sign_col1">
                     <div className="d-flex align-items-center name_heading" style={{'width': '25em'}}>
                         <GiSlumberingSanctuary className="ic_icon"/>
                         <h2 className="name">IChallenge</h2>

@@ -2,10 +2,10 @@
     align-items: center;
     .sign_row {
         display: grid;
-        grid-template-columns: minmax(0.2em,2em) 1fr minmax(0.2em, 2em) 1fr minmax(0.2em, 2em);
+        grid-template-columns: minmax(0.5em,2em) 1fr minmax(0.5em, 2em) 1fr minmax(0.5em, 2em);
         align-items: center;
         .sign_col1 {
-            width: 85%;
+            width: 80%;
             .name_heading {
                 margin-bottom: 25px;
                 font-family: 'Inter', 'Roboto';
@@ -161,15 +161,39 @@
 
             }
         }
-        @media (max-width: 767px) {
-            .sign_col1 {
-                display: flex;
-                justify-content: center;
-            }
-            .sign_col2 {
-                margin-top: 30px;
-                justify-content: center;
-                display: flex;
+    }
+    @media (max-width: 830px) {
+        .sign_row {
+            display: grid;
+            gap: 2em;
+            grid-template-columns: 100%;
+            align-items: center;
+            justify-items: center;
+            .sign_col1{
+                max-width: 20em;
+                
+                    .name_heading {
+                
+                        .name {
+                            font-size: 2rem;
+                            font-weight: 500;
+                        }
+                    }
+                
+                    .welcome_back {
+                        h2 {
+                            font-size: 2rem;
+                            font-weight: 400;
+                        }
+                    }
+                
+                    .text {
+                        margin-top: 25px;
+                        color: #646464;
+                        font-size: 1rem;
+                        font-family: 'karla', 'Roboto';
+                    }
+
             }
         }
     }
