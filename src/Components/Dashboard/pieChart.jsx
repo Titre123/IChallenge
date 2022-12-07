@@ -6,7 +6,7 @@ Chart.register(ArcElement);
 
 const DChart = ({data}) => {
     return (
-        <Doughnut data={data} />
+        <Doughnut data={data} options={{maintainAspectRatio: false, responsive: true,  }}/>
     )
 }
 

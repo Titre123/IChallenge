@@ -130,7 +130,7 @@ const DashboardPage = () => {
                                                 </div>
                                             </Col>
                                         </Row>
-                                        <div  style={{ marginTop: "30px"}}>
+                                        <div className="barChrt">
                                             <BarChart data={barData} />
                                         </div>
                                     </CardBody>
@@ -146,13 +146,15 @@ const DashboardPage = () => {
                                     <CardBody className="body1">
                                         <div>
                                             <p className="stat_text">GitHub Statistics</p>
-                                            <DChart data={pieData} />
+                                            <div className="pie-pie">
+                                                <DChart data={pieData} />
+                                            </div>
                                             <div className="chart_stat">
                                                 <p className="chart_text">2,9 M </p>
                                                 <div className="d-flex align-items-center chart_text1"><BiTrendingUp  className="icon_bg1" style={{width: "20px", height:"20px"}}/><span className="stat_stat">+ 300K</span></div>
                                             </div>
                                             <div className="male_stat">
-                                                <p style={{textAlign: "center", padding: '15px'}}>
+                                                <p className="male-text">
                                                     40 % <br /> <span style={{fontSize: '15px'}}>Male</span>
                                                 </p>
                                             </div>
@@ -170,13 +172,6 @@ const DashboardPage = () => {
                                         </div>
                                     </CardBody>
                                 </Card>
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col sm="12" md="12" lg="12">
-                                <div className="cmt">
-                                    <Commits />
-                                </div>
                             </Col>
                         </Row>
                     </Col>
