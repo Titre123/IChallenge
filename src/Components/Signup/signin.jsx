@@ -6,34 +6,38 @@ import { AiFillEye, AiFillGithub } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
 import { signInWithGitHub, logout } from '../../firebase';
 import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../firebase"
+import { auth, logInWithEmailAndPassword } from "../../firebase"
 import { useState } from "react";
 
 const SignIn = () => {
     const [user, loading, error] = useAuthState(auth);
     const navigate = useNavigate();
+    const [statedType, setstatedType] = useState(false);
+    const [input, setInput] = useState({'email': '', 'password': ''})
 
-    // useEffect(() => {
-    //     if (loading) {
-    //     // maybe trigger a loading screen
-    //     return;
-    //     }
-    //     if (user) navigate("/dashboard");
-    //     else navigate("/signin");
-    //     }, [user, loading]);
-
-    const [statedType, setstatedType] = useState(false)
+    const type = statedType ? 'text' : 'password';
 
     const handleSubmit = (event) => {
         event.preventDefault()
+        logInWithEmailAndPassword(auth, input.email, input.password)
     }
-    let type;
-    if (statedType == true){
-        type = 'text';
+
+    const handleChange = (e) => {
+        const {value, name} = e.target;
+        setInput(prev => { 
+            return{
+                ...prev,
+                [name]: value
+            }
+        })
     }
-    else {
-        type = 'password'
-    }
+    useEffect(() => {
+        if (loading) {
+        // maybe trigger a loading screen
+        return;
+        }
+        if (user) navigate("/dashboard");
+        }, [user, loading]);
     return(
         <div className="Sign_up containers">
             <div className="sign_row">
@@ -63,11 +67,11 @@ const SignIn = () => {
                             <p>Don't have an account? <Link to="/signUp" className="signup_link"> sign up</Link></p>
                             <Form onSubmit={() => handleSubmit}>
                                 <FormGroup className="card_form_group">
-                                    <Input type="email" placeholder="Enter your email" className="input-input" name="email" required />
+                                    <Input type="email" placeholder="Enter your email" className="input-input" name="email" onChange={handleChange} required />
                                 </FormGroup>
                                 <FormGroup className="card_form_group1">
                                     <InputGroup className="i_group" >
-                                        <Input type={type} placeholder="password" className="input-input" name='password' required />
+                                        <Input type={type} placeholder="password" className="input-input" onChange={handleChange} name='password' required />
                                         <AiFillEye className="eye" onClick={() => setstatedType(prev => !prev)}/>
                                     </InputGroup>
                                 </FormGroup>

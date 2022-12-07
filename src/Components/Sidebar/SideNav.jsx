@@ -32,7 +32,7 @@ const SideNav = () => {
                         <p>@illiyinStudio <br /> <span className="instagram">Instagram</span></p>
                         <div className="forwar_bacward_icons">
                             {
-                                collapse ? <IoIosArrowDown style={{width: "27px", height: "27px", color: "#775DA6", marginRight: "10px"}}/> : <IoIosArrowForward style={{width: "27px", height: "27px", color: "#775DA6", marginRight: "10px"}}/>
+                                collapse ? <IoIosArrowDown style={{width: "27px", height: "27px", color: "#775DA6", marginRight: "16px"}}/> : <IoIosArrowForward style={{width: "27px", height: "27px", color: "#775DA6", marginRight: "16px"}}/>
                             }
                         </div>
                     </div>

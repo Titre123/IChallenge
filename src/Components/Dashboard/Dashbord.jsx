@@ -13,6 +13,7 @@ import { TfiSharethisAlt } from "react-icons/tfi"
 import { BiTrendingUp, BiTrendingDown } from "react-icons/bi";
 import { MdKeyboardArrowDown } from "react-icons/md"
 import "./Dashboard.styles.scss";
+import { TbDivide } from "react-icons/tb";
 
 
 const DashboardPage = () => {
@@ -72,7 +73,7 @@ const DashboardPage = () => {
                                     <CardBody className="body_B">
                                         <div className="head">
                                             <h5 className="head_text">Daily Commit</h5>
-                                            <AiFillQuestionCircle style={{color: "#CCCCCC", width: "30px", height: "30px"}}/>
+                                            <AiFillQuestionCircle style={{color: "#CCCCCC", width: "20px", height: "20px"}}/>
                                         </div>
                                         <p className="stat">200k</p>
                                         <p className="graph"><BiTrendingUp  className="icon_bg"/> + 50,3% <span style={{color: "#CCCCCC"}}>vs last week</span></p>
@@ -84,7 +85,7 @@ const DashboardPage = () => {
                                     <CardBody className="body_B">
                                         <div className="head">
                                             <h5  className="head_text">Followers</h5>
-                                            <AiFillQuestionCircle style={{color: "#CCCCCC", width: "30px", height: "30px"}}/>
+                                            <AiFillQuestionCircle style={{color: "#CCCCCC", width: "20px", height: "20px"}}/>
                                         </div>
                                         <p className="stat">1.230</p>
                                         <p className="graph"><BiTrendingUp  className="icon_bg"/> + 50,3% <span style={{color: "#CCCCCC"}}>vs last week</span></p>
@@ -96,7 +97,7 @@ const DashboardPage = () => {
                                     <CardBody className="body_B">
                                         <div className="head">
                                             <h5  className="head_text">Repository</h5>
-                                            <AiFillQuestionCircle style={{color: "#CCCCCC", width: "30px", height: "30px"}}/>
+                                            <AiFillQuestionCircle style={{color: "#CCCCCC", width: "20px", height: "20px"}}/>
                                         </div>
                                         <p className="stat">12</p>
                                         <p className="graph1"><BiTrendingDown  className="icon_bg1"/> + 50,3% <span style={{color: "#CCCCCC"}}>vs last week</span></p>
@@ -109,26 +110,26 @@ const DashboardPage = () => {
                                 <Card className="main_stat_card">
                                     <CardBody>
                                         <p className="main_stat_heading">GitHub Statistics</p>
-                                        <Row className="subheading">
-                                            <Col className="avg_like" lg="4" md="12" sm="12">
+                                        <div className="subheading">
+                                            <div className="avg_like">
                                                 <div className="avg_like_icon"><BsFillSuitHeartFill className="like_icon"/></div>
                                                 <div className="num">7.006 <span>+ 10,3 %</span>
                                                     <p className="avg_text">Avg likes this week</p>
                                                 </div>
-                                            </Col>
-                                            <Col className="avg_like" lg="4" md="12" sm="12">
+                                            </div>
+                                            <div className="avg_like">
                                                 <div className="avg_comment_icon"><RiMessage2Fill className="comment_icon"/></div>
                                                 <div className="comment_num">7.006 <span>+ 10,3 %</span>
                                                     <p className="avg_comment">Avg comments this week</p>
                                                 </div>
-                                            </Col>
-                                            <Col className="avg_like" lg="4" md="12" sm="12">
+                                            </div>
+                                            <div className="avg_like">
                                                 <div className="avg_share_icon"><TfiSharethisAlt className="share_icon"/></div>
                                                 <div className="share_num">7.006 <span>+ 10,3 %</span>
                                                     <p className="avg_share">Avg share this week</p>
                                                 </div>
-                                            </Col>
-                                        </Row>
+                                            </div>
+                                        </div>
                                         <div  style={{ marginTop: "30px"}}>
                                             <BarChart data={barData} />
                                         </div>

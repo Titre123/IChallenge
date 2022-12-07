@@ -3,7 +3,8 @@ import {
   GithubAuthProvider,
   getAuth,
   signInWithPopup,
-  signOut,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword
 } from "firebase/auth";
 import { getDatabase, ref, set} from "firebase/database";
 
@@ -13,7 +14,7 @@ const firebaseConfig = {
   projectId: import.meta.env.VITE_PROJECT_ID,
   storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
   messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
-  appId: "1:790381598739:web:2f017f5ca523a9455c47e6",
+  appId: import.meta.env.VITE_APP_ID,
   databaseURL: "https://ichallenge-bcc55-default-rtdb.firebaseio.com"
 };
 
@@ -33,12 +34,38 @@ const signInWithGitHub = async () => {
       email: user.email,
       profileImg: user.photoURL,
       dateCreated: (new Date()).toUTCString(),
+      provider: 'github'
     })
   } catch (err) {
     console.error(err);
     alert(err.message);
   }
 };
+
+const registerWithEmailANdPassword = async (auth, email, password) => {
+  try {
+    const res = await createUserWithEmailAndPassword(auth, email, password)
+    const user = res.user;
+    console.log(user)
+    const reference = ref(database, 'users/' + user.uid);
+    set(reference, {
+      email: user.email,
+      dateCreated: (new Date()).toUTCString(),
+    })
+  } catch (err) {
+    console.error(err);
+    alert(err.message);
+  }
+}
+
+const logInWithEmailAndPassword = async (auth, email, password) => {
+  try{
+    const res = await signInWithEmailAndPassword(auth, email, password);
+  } catch (err) {
+    console.error(err);
+    alert(err.message);
+  }
+}
 
 const logout = () => {
   signOut(auth);
@@ -48,4 +75,6 @@ export {
   auth,
   signInWithGitHub,
   logout,
+  registerWithEmailANdPassword,
+  logInWithEmailAndPassword
 };

@@ -1,6 +1,7 @@
 .Dashboard {
     display: flex;
     font-size: 20px;
+    font-family: 'overpass', sans-serif;
 
     .sideBar {
         position: fixed;
@@ -20,7 +21,10 @@
                     
                         .head {
                             display: flex;
+                            gap: 1em;
                             align-items: center;
+                            justify-content: center;
+                            flex-wrap: wrap;
                             width: 100%;
 
                             .head_text {
@@ -32,13 +36,13 @@
                         }
                         .stat {
                             font-size: 1em;
-                            font-weight: 800;
+                            font-weight: 700;
                             color:  #363b64;
                         }
                         .graph {
                             color: #567EF7;
-                            font-weight: 700;
-                            font-size: 15px;
+                            font-weight: 500;
+                            font-size: 0.8rem;
 
                             .icon_bg {
                                 background-color: #E4EAFE;
@@ -46,8 +50,8 @@
                         }
                         .graph1 {
                             color: #ED6A6A;
-                            font-weight: 700;
-                            font-size: 15px;
+                            font-weight: 500;
+                            font-size: 0.8rem;
                             
                             .icon_bg1 {
                                 background-color: #FCE4E4;
@@ -76,6 +80,7 @@
 
                 .avg_like {
                     display: flex;
+                    align-items: center;
                     margin-right: 15px;
 
                     .avg_like_icon, .avg_comment_icon, .avg_share_icon {
@@ -95,12 +100,14 @@
                     .num {
                         color:#363b64;
                         font-weight: 500;
+                        font-size: 1.2rem;
                         span {
                             color: #6B8EF8;
                         }
                         .avg_text {
                             font-weight: 400;
                             color: #999999;
+                            font-size: 1rem;
                         }
                     }
                     .avg_comment_icon {
@@ -113,12 +120,14 @@
                     .comment_num {
                         color:#363b64;
                         font-weight: 500;
+                        font-size: 1.2rem;
                         span {
                             color: #EB5757;
                         }
                         .avg_comment {
                             font-weight: 400;
                             color: #999999;
+                            font-size: 1rem;
                         }
                     }
                     .avg_share_icon {
@@ -131,6 +140,7 @@
                     .share_num {
                         color:#363b64;
                         font-weight: 500;
+                        font-size: 1.2rem;
 
                         span {
                             color: #6B8EF8;
@@ -138,6 +148,7 @@
                         .avg_share {
                             font-weight: 400;
                             color: #999999;
+                            font-size: 1rem;
                         }
                     }
                 }
