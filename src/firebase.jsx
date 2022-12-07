@@ -9,12 +9,12 @@ import {
 import { getDatabase, ref, set} from "firebase/database";
 
 const firebaseConfig = {
-  apiKey:import.meta.env.VITE_API_KEY,
-  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
-  projectId: import.meta.env.VITE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
-  appId: import.meta.env.VITE_APP_ID,
+  apiKey: "AIzaSyCMn6TUUFAbu6_6CjGdbTKxhoXbHXdCrYs",
+  authDomain: "ichallenge-bcc55.firebaseapp.com",
+  projectId: "ichallenge-bcc55",
+  storageBucket: "ichallenge-bcc55.appspot.com",
+  messagingSenderId: "790381598739",
+  appId: "1:790381598739:web:2f017f5ca523a9455c47eb",
   databaseURL: "https://ichallenge-bcc55-default-rtdb.firebaseio.com"
 };
 
