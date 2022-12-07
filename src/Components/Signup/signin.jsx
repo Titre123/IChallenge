@@ -1,12 +1,12 @@
-import { React, useState, useEffect } from "react"
+import { React, useEffect, useState } from "react"
 import { Button, Col, Row, Card, CardBody, Form, FormGroup, InputGroup, Input, FormText } from "reactstrap";
 import "./sign.styles.scss";
 import { GiSlumberingSanctuary } from "react-icons/gi";
 import { AiFillEye, AiFillGithub } from "react-icons/ai";
-import { Link, useNavigate } from "react-router-dom";/* 
+import { Link, useNavigate } from "react-router-dom"; 
 import { signInWithGitHub } from '../../firebase';
 import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../firebase" */
+import { auth } from "../../firebase"
 
 const SignIn = () => {
     /* const [user, loading, error] = useAuthState(auth);
