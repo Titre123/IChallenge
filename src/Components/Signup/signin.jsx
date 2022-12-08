@@ -31,13 +31,13 @@ const SignIn = () => {
             }
         })
     }
-    useEffect(() => {
-        if (loading) {
-        // maybe trigger a loading screen
-        return;
-        }
-        if (user) navigate("/dashboard");
-        }, [user, loading]);
+    // useEffect(() => {
+    //     if (loading) {
+    //     // maybe trigger a loading screen
+    //     return;
+    //     }
+    //     if (user) navigate("/dashboard");
+    //     }, [user, loading]);
     return(
         <div className="Sign_up containers">
             <div className="sign_row">

@@ -169,6 +169,8 @@
             grid-template-columns: 100%;
             align-items: center;
             justify-items: center;
+            width: 100vw;
+            overflow-x: hidden;
             .sign_col1{
                 max-width: 20em;
                 
