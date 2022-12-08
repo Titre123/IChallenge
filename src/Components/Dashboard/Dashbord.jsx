@@ -128,7 +128,7 @@ const DashboardPage = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div  style={{ marginTop: "30px", width:"658px", height:"467px"}}>
+                                        <div  style={{ marginTop: "30px", width:"auto", height:"400px"}}>
                                             <BarChart data={barData} />
                                         </div>
                                     </CardBody>

@@ -292,5 +292,13 @@
                 }
             }
         }
+        .col1 {
+            .main_stat_card{
+                    .subheading{
+                        flex-direction: column;
+                        gap: 1em;
+                    }
+            }
+        }
     }
 }
