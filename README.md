@@ -32,9 +32,9 @@ const type = statedType ? 'text' : 'password';
 ```
 
 ## ScreenShots
-![signUp](./screenshots/signUp.JPG)
+![signUp](./screenshots/signUp.jpg)
 ![ichallenge web architecture](./screenshots/ichallenge web architecture.JPG)
-![IChallenge](./screenshots/IChallenge.JPG)
+![IChallenge](./screenshots/IChallenge.jpg)
 
 
 ## Credit
