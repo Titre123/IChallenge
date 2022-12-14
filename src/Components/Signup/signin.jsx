@@ -86,7 +86,7 @@ const SignIn = () => {
                             </div>
                             <hr />
                             <div className="c_write">
-                                <p>Protected by recaptcha and subject to the  <span className="c_color">Fenkai Privacy Policy</span> and <span className="c_color">Terms of Service</span>.</p>
+                                <p>Protected by recaptcha and subject to the  <span className="c_color">IChallenge Privacy Policy</span> and <span className="c_color">Terms of Service</span>.</p>
                             </div>
                         </CardBody>
                     </Card>
