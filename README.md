@@ -32,8 +32,9 @@ const type = statedType ? 'text' : 'password';
 ```
 
 ## ScreenShots
+### Sign Up ScreenShot
 ![signUp](./screenshots/signUp.jpg)
-![ichallenge web architecture](./screenshots/ichallenge web architecture.JPG)
+### DashBoard ScreenShot
 ![IChallenge](./screenshots/IChallenge.jpg)
 
 
