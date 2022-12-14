@@ -9,7 +9,7 @@ import {
 import { getDatabase, ref, set} from "firebase/database";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCMn6TUUFAbu6_6CjGdbTKxhoXbHXdCrYs",
+  apiKey: "AIzaSyCMn6TUUFAbu6_6CjGdbTkxhoXbHXdCrYs",
   authDomain: "ichallenge-bcc55.firebaseapp.com",
   projectId: "ichallenge-bcc55",
   storageBucket: "ichallenge-bcc55.appspot.com",

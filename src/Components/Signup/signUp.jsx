@@ -39,11 +39,11 @@ const SignIn = () => {
                         <h2 className="name">IChallenge</h2>
                     </div>
                     <div className="welcome_back">
-                        <h2>Welcome back <br /> to IChallenge</h2>
+                        <h2>Welcome <br /> to IChallenge</h2>
                     </div>
                     <div className="text">
                         <p className="paragraph">
-                            Stop wasting time with frustrating platforms.<br /> Build beautiful courses & contents with ease. Get started<br /> in minutes with our unique & simple authoring tool. 
+                            Stop wasting time with frustrating platforms.<br /> Challenge your colleagues to a coding Challenge and improve your consistency skills and become a better programmer.
                         </p>
                     </div>
                 </div>
@@ -57,10 +57,7 @@ const SignIn = () => {
                             <p>Don't have an account? <Link to="/signIn" className="signup_link"> sign in</Link></p>
                             <Form onSubmit={handleSubmit}>
                                 <FormGroup className="card_form_group">
-                                    <Input type="text" placeholder="Username" className="input-input" name="text" required />
-                                </FormGroup>
-                                <FormGroup className="card_form_group">
-                                    <Input type="email" placeholder="Enter your email" className="input-input" name="email" onChange={handleChange}  required />
+                                    <Input type="email" placeholder="Enter your GitHub email" className="input-input" name="email" onChange={handleChange}  required />
                                 </FormGroup>
                                 <FormGroup className="card_form_group1">
                                     <InputGroup className="i_group">

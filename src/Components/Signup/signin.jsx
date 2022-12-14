@@ -31,13 +31,13 @@ const SignIn = () => {
             }
         })
     }
-    // useEffect(() => {
-    //     if (loading) {
-    //     // maybe trigger a loading screen
-    //     return;
-    //     }
-    //     if (user) navigate("/dashboard");
-    //     }, [user, loading]);
+    useEffect(() => {
+        if (loading) {
+        // maybe trigger a loading screen
+        return;
+        }
+        if (user) navigate(`/${user.uid}/dashboard`);
+        }, [user, loading]);
     return(
         <div className="Sign_up containers">
             <div className="sign_row">
@@ -53,7 +53,7 @@ const SignIn = () => {
                     </div>
                     <div className="text">
                         <p className="paragraph">
-                            Stop wasting time with frustrating platforms.<br /> Build beautiful courses & contents with ease. Get started<br /> in minutes with our unique & simple authoring tool. 
+                            Stop wasting time with frustrating platforms.<br /> Challenge your colleagues to a coding Challenge and improve your consistency skills and become a better programmer.
                         </p>
                     </div>
                 </div>
@@ -67,7 +67,7 @@ const SignIn = () => {
                             <p>Don't have an account? <Link to="/signUp" className="signup_link"> sign up</Link></p>
                             <Form onSubmit={() => handleSubmit}>
                                 <FormGroup className="card_form_group">
-                                    <Input type="email" placeholder="Enter your email" className="input-input" name="email" onChange={handleChange} required />
+                                    <Input type="email" placeholder="Enter your GitHub email" className="input-input" name="email" onChange={handleChange} required />
                                 </FormGroup>
                                 <FormGroup className="card_form_group1">
                                     <InputGroup className="i_group" >

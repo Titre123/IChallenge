@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import Nav from "../Navbar/Navbar";
 import { Row, Col, Card, CardBody, Container } from "reactstrap";
 import { PieData } from "./pie";
@@ -13,9 +13,17 @@ import { TfiSharethisAlt } from "react-icons/tfi"
 import { BiTrendingUp, BiTrendingDown } from "react-icons/bi";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import "./Dashboard.styles.scss";
+import { auth } from "../../firebase";
+import { useAuthState } from "react-firebase-hooks/auth";
 
 const DashboardPage = () => {
+    const [user, loading, error] = useAuthState(auth);
+    const [userInfo, setUserInfo] = useState()
+    const [githubUserInfo, setGithubUserInfo] = useState()
+    const [Repository, setRepository] = useState()
+    const [commit, setCommit] = useState(0)
     
+    // Setting Up Pie Chart
     const [ pieData, setPieData ] = useState({
         labels: PieData.map((data) => data.label),
         datasets: [{
@@ -30,6 +38,7 @@ const DashboardPage = () => {
         }]
     });
 
+    // Data to set ip our bar chart
     const [ barData, setBarData ] = useState({
         labels: BarData.map((data) => data.date),
         datasets: [{
@@ -54,13 +63,42 @@ const DashboardPage = () => {
             borderRadius: 10
         },]
     });
+    console.log()
+    // UseEffect to load set data from our fireabase user api endpoint
+    useEffect(() => {
+        const path = `https://ichallenge-bcc55-default-rtdb.firebaseio.com/users/${user.uid}.json`
+        fetch(path).then(res => res.json()).then(data => setUserInfo(data))
+    }, user)
 
-    return(
+    useEffect(() => {
+        const path = `https://api.github.com/user/${user.providerData[0].uid}`
+        fetch(path).then(res => res.json()).then(data => setGithubUserInfo(data))
+    }, user)
+
+    useEffect(() => {
+        const path = githubUserInfo ? githubUserInfo.repos_url : ''
+        fetch(path).then(res => res.json()).then(data => setRepository(data))
+    }, githubUserInfo)
+
+    useEffect(() => {
+        if (Repository) {
+            Repository.map(item => {
+                async () => {
+                    const res = await fetch(item.commits_url)
+                    setCommit(prev => prev + res.length)
+                }
+            })
+        }
+    }, Repository)
+
+    console.log(Repository)
+
+    return( 
         <div className="Dashboard">
-            <div className="sideBar"><SideNav /></div>
+            <div className="sideBar"><SideNav username= { githubUserInfo ? githubUserInfo.login : ''} twitter={githubUserInfo ? githubUserInfo.twitter_username : ''}/></div>
             <Container className="bd">
                 <div className="Dashboard_body">
-                    <Nav />
+                    <Nav image={userInfo ? userInfo.profileImg : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyKpQUy8JP90MAZxFjU0P9bPqkUWL35fd8Ag&usqp=CAU'} />
                 </div>
                 <Row>
                     {/* fisrt colume for the number and chart*/}
@@ -73,8 +111,7 @@ const DashboardPage = () => {
                                             <h5 className="head_text">Daily Commit</h5>
                                             <AiFillQuestionCircle style={{color: "#CCCCCC", width: "20px", height: "20px"}}/>
                                         </div>
-                                        <p className="stat">200k</p>
-                                        <p className="graph"><BiTrendingUp  className="icon_bg"/> + 50,3% <span style={{color: "#CCCCCC"}}>vs last week</span></p>
+                                        <p className="stat">200k</p>  
                                     </CardBody>
                                 </Card>
                             </Col>
@@ -85,8 +122,7 @@ const DashboardPage = () => {
                                             <h5  className="head_text">Followers</h5>
                                             <AiFillQuestionCircle style={{color: "#CCCCCC", width: "20px", height: "20px"}}/>
                                         </div>
-                                        <p className="stat">1.230</p>
-                                        <p className="graph"><BiTrendingUp  className="icon_bg"/> + 50,3% <span style={{color: "#CCCCCC"}}>vs last week</span></p>
+                                        <p className="stat">{githubUserInfo ? githubUserInfo.followers : ''}</p>
                                     </CardBody>
                                 </Card>
                             </Col>
@@ -97,8 +133,7 @@ const DashboardPage = () => {
                                             <h5  className="head_text">Repository</h5>
                                             <AiFillQuestionCircle style={{color: "#CCCCCC", width: "20px", height: "20px"}}/>
                                         </div>
-                                        <p className="stat">12</p>
-                                        <p className="graph1"><BiTrendingDown  className="icon_bg1"/> + 50,3% <span style={{color: "#CCCCCC"}}>vs last week</span></p>
+                                        <p className="stat">{githubUserInfo ? githubUserInfo.public_repos: ''}</p>
                                     </CardBody>
                                 </Card>                             
                             </Col>

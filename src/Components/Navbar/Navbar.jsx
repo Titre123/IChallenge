@@ -4,7 +4,7 @@ import { BiSearch } from "react-icons/bi";
 import { IoMdNotifications } from "react-icons/io"
 import "./Navbar.styles.scss";
 
-const Nav = () => {
+const Nav = (props) => {
     
     const [ show, setShow ] = useState(false);
     const toggleShow = () => setShow(!show);
@@ -32,7 +32,7 @@ const Nav = () => {
                 </div>
                 <Media className="dash_media" id="userName">
                     <Media left middle className="img_media">
-                        <Media object src="images.jpeg" className="passport" alt="User image"></Media>
+                        <Media object src={props.image} className="passport" alt="User image"></Media>
                     </Media>
                     <Media body className="d-none d-md-none d-lg-none ">
                         <h4>User name</h4>

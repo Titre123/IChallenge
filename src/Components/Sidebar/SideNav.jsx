@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 import { logout } from "../../firebase";
 
 
-const SideNav = () => {
+const SideNav = (props) => {
     const [collapse, setCollapse] = useState(false);
     const [dashboard, setDashboard] = useState(false);
     const [post, setPost] = useState(false);
@@ -29,7 +29,7 @@ const SideNav = () => {
                 <div className="user_social">
                     <ImSphere style={{width: "30px", height: "30px", color: "#775DA6", marginRight: "15px"}} />
                     <div className="user_mail">
-                        <p>@illiyinStudio <br /> <span className="instagram">Instagram</span></p>
+                        <p>{'@' + props.username} <br /> <span className="instagram">GitHub</span></p>
                         <div className="forwar_bacward_icons">
                             {
                                 collapse ? <IoIosArrowDown style={{width: "27px", height: "27px", color: "#775DA6", marginRight: "16px"}}/> : <IoIosArrowForward style={{width: "27px", height: "27px", color: "#775DA6", marginRight: "16px"}}/>
@@ -39,9 +39,8 @@ const SideNav = () => {
                 </div>
                 <Collapse isOpen={collapse} >
                     <ul className="medias">
-                        <li>name@twitter</li>
-                        <li>name@github</li>
-                        <li>name@facbook</li>
+                        <li>{props.username + '@GitHub'}</li>
+                        <li>{props.twitter + '@Twitter'}</li>
                     </ul>
                 </Collapse>
             </div>
