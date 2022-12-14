@@ -31,6 +31,9 @@ const type = statedType ? 'text' : 'password';
     }
 ```
 
+## ScreenShots
+
+
 ## Credit
 Taiwo Ola-Balogun 
 Email : [taiwotriumphant@gmail.com](taiwotriumphant@gmail.com)
