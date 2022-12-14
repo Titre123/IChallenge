@@ -32,5 +32,7 @@ const type = statedType ? 'text' : 'password';
 ```
 
 ## Credit
-Taiwo Ola-Balogun
-Tolulope Adeleke
+Taiwo Ola-Balogun 
+Email : [taiwotriumphant@gmail.com](taiwotriumphant@gmail.com)
+[Tolulope Adeleke]
+Email : [tolulupeadeleke@gmail.com](tolulupeadeleke@gmail.com)
