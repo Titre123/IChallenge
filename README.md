@@ -43,4 +43,4 @@ Taiwo Ola-Balogun
 Email : [taiwotriumphant@gmail.com](taiwotriumphant@gmail.com)
 
 Tolulope Adeleke
-Email : [tolulopeadeleke@gmail.com](tolulopeadeleke@gmail.com)
+Email : [toluadelekesteve@gmail.com](toluadelekesteve@gmail.com)
